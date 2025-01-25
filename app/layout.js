@@ -1,5 +1,15 @@
+import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {
+  BsPersonVcardFill,
+  BsFillKeyFill,
+  BsCaretLeftSquareFill,
+  BsFillFileTextFill,
+} from "react-icons/bs";
+import Link from "next/link";
+import { AuthProvider } from "@/app/lib/AuthContext";
+import Protected from "./(protected)/layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,11 +28,67 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          <div className="flex h-screen">
+            <aside className="w-64 bg-zinc-900 text-white flex flex-col">
+              <nav className="flex-1 p-4">
+                <ul>
+                  <li className="flex items-center mb-4">
+                    <Link href={"/user/profile"} className="flex items-center">
+                      <BsPersonVcardFill className="text-blue-500 w-6 h-6 mr-2" />
+                      <span>Profil</span>
+                    </Link>
+                  </li>
+                  <li className="flex items-center mb-4">
+                    <Link
+                      href={"/user/changepassword"}
+                      className="flex items-center"
+                    >
+                      <BsFillKeyFill className="text-green-500 w-6 h-6 mr-2" />
+                      <span>Zmiana hasła</span>
+                    </Link>
+                  </li>
+                  <li className="flex items-center mb-4">
+                    <Link href={"/user/articles"} className="flex items-center">
+                      <BsFillFileTextFill className="text-yellow-500 w-6 h-6 mr-2" />
+                      <span>Artykuły</span>
+                    </Link>
+                  </li>
+                  <li className="flex items-center mb-4">
+                    <Link href={"/user/signout"} className="flex items-center">
+                      <BsCaretLeftSquareFill className="text-red-500 w-6 h-6 mr-2" />
+                      <span>Wyloguj</span>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+            <div className="flex-1 flex flex-col">
+              <header className="bg-zinc-1000 text-white p-4 flex justify-start gap-4">
+                <Link href={"/"}>
+                  <h1 className="text-2xl cursor-pointer">Strona główna</h1>
+                </Link>
+                <div className="flex-1 flex justify-end gap-4">
+                  <Link href={"/user/signin"}>
+                    <button className="h-10 px-5 text-zinc-50 transition-colors duration-150 border border-zinc-50 rounded-lg focus:shadow-outline hover:bg-zinc-50 hover:text-zinc-900">
+                      Logowanie
+                    </button>
+                  </Link>
+                  <Link href={"/user/register"}>
+                    <button className="h-10 px-5 text-zinc-50 transition-colors duration-150 border border-zinc-50 rounded-lg focus:shadow-outline hover:bg-zinc-50 hover:text-zinc-900">
+                      Rejestracja
+                    </button>
+                  </Link>
+                </div>
+              </header>
+              <main className="flex-1 p-6 bg-gray-100">{children}</main>
+            </div>
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
