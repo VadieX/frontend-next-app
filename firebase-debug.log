@@ -1,0 +1,188 @@
+[debug] [2025-01-25T11:59:14.453Z] ----------------------------------------------------------------------
+[debug] [2025-01-25T11:59:14.456Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mklim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-01-25T11:59:14.456Z] CLI Version:   13.29.2
+[debug] [2025-01-25T11:59:14.456Z] Platform:      win32
+[debug] [2025-01-25T11:59:14.456Z] Node Version:  v20.18.0
+[debug] [2025-01-25T11:59:14.457Z] Time:          Sat Jan 25 2025 12:59:14 GMT+0100 (czas środkowoeuropejski standardowy)
+[debug] [2025-01-25T11:59:14.457Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-25T11:59:14.696Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-25T11:59:14.696Z] > authorizing via signed-in user (mklima307@gmail.com)
+[debug] [2025-01-25T11:59:14.696Z] [iam] checking project next-js-project-27032 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-01-25T11:59:14.697Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:14.698Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:14.699Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions [none]
+[debug] [2025-01-25T11:59:14.699Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions x-goog-quota-user=projects/next-js-project-27032
+[debug] [2025-01-25T11:59:14.699Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-25T11:59:15.557Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions 200
+[debug] [2025-01-25T11:59:15.558Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-25T11:59:15.558Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:15.559Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:15.559Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/next-js-project-27032 [none]
+[debug] [2025-01-25T11:59:15.809Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/next-js-project-27032 200
+[debug] [2025-01-25T11:59:15.810Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/next-js-project-27032 {"projectId":"next-js-project-27032","projectNumber":"363645230761","displayName":"next-js-project","name":"projects/next-js-project-27032","resources":{"hostingSite":"next-js-project-27032"},"state":"ACTIVE","etag":"1_5a89b67e-4b8d-4524-9ae5-bb3cf7f021a5"}
+[debug] [2025-01-25T11:59:18.217Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:18.217Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:18.218Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites pageToken=&pageSize=10
+[debug] [2025-01-25T11:59:19.355Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites 200
+[debug] [2025-01-25T11:59:19.356Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites {"sites":[{"name":"projects/next-js-project-27032/sites/next-js-project-27032","defaultUrl":"https://next-js-project-27032.web.app","appId":"1:363645230761:web:4ee77229f0385f81a213b8","type":"DEFAULT_SITE"}]}
+[debug] [2025-01-25T11:59:19.356Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:19.356Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:19.356Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:363645230761:web:4ee77229f0385f81a213b8/config [none]
+[debug] [2025-01-25T11:59:19.868Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:363645230761:web:4ee77229f0385f81a213b8/config 200
+[debug] [2025-01-25T11:59:19.869Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:363645230761:web:4ee77229f0385f81a213b8/config {"projectId":"next-js-project-27032","appId":"1:363645230761:web:4ee77229f0385f81a213b8","storageBucket":"next-js-project-27032.firebasestorage.app","apiKey":"AIzaSyAXf8xtOCExJjzk3nxZEueNnkfYPnfphO4","authDomain":"next-js-project-27032.firebaseapp.com","messagingSenderId":"363645230761","measurementId":"G-B28BWCNK8V"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-01-25T11:59:25.563Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:25.563Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T11:59:25.563Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites/next-js-project-27032 [none]
+[debug] [2025-01-25T11:59:26.450Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites/next-js-project-27032 200
+[debug] [2025-01-25T11:59:26.451Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites/next-js-project-27032 {"name":"projects/next-js-project-27032/sites/next-js-project-27032","defaultUrl":"https://next-js-project-27032.web.app","appId":"1:363645230761:web:4ee77229f0385f81a213b8","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.1.0
+
+[info]    - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]  ⨯ ESLint: Cannot serialize key "parse" in parser: Function values are not supported.
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/12) ...
+
+[info] AuthProvider null
+AuthProvider null
+AuthProvider null
+AuthProvider null
+
+[info] AuthProvider null
+
+[info]    Generating static pages (3/12) 
+
+[info]    Generating static pages (6/12) 
+
+[info] AuthProvider null
+
+[info]  ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/user/signin". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at s (C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\server\chunks\482.js:3:213601)
+    at d (C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\server\chunks\482.js:3:230184)
+    at a (C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\server\app\(public)\user\signin\page.js:1:4786)
+    at nO (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:45959)
+    at nI (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:47734)
+    at nL (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:65533)
+    at nN (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:63164)
+    at n$ (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:46311)
+    at nI (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:47780)
+    at nI (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:62515)
+Error occurred prerendering page "/user/signin". Read more: https://nextjs.org/docs/messages/prerender-error
+Export encountered an error on /(public)/user/signin/page: /user/signin, exiting the build.
+
+[info]  ⨯ Static worker exited with code: 1 and signal: null
+
+[debug] [2025-01-25T11:59:44.950Z] Error: ENOENT: no such file or directory, open 'C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-01-25T12:02:00.209Z] ----------------------------------------------------------------------
+[debug] [2025-01-25T12:02:00.212Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mklim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-01-25T12:02:00.213Z] CLI Version:   13.29.2
+[debug] [2025-01-25T12:02:00.213Z] Platform:      win32
+[debug] [2025-01-25T12:02:00.213Z] Node Version:  v20.18.0
+[debug] [2025-01-25T12:02:00.213Z] Time:          Sat Jan 25 2025 13:02:00 GMT+0100 (czas środkowoeuropejski standardowy)
+[debug] [2025-01-25T12:02:00.214Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-25T12:02:00.453Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-25T12:02:00.454Z] > authorizing via signed-in user (mklima307@gmail.com)
+[debug] [2025-01-25T12:02:00.454Z] [iam] checking project next-js-project-27032 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-01-25T12:02:00.455Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:00.455Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:00.456Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions [none]
+[debug] [2025-01-25T12:02:00.457Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions x-goog-quota-user=projects/next-js-project-27032
+[debug] [2025-01-25T12:02:00.457Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-25T12:02:01.367Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions 200
+[debug] [2025-01-25T12:02:01.367Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/next-js-project-27032:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-25T12:02:01.368Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:01.368Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:01.368Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/next-js-project-27032 [none]
+[debug] [2025-01-25T12:02:01.763Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/next-js-project-27032 200
+[debug] [2025-01-25T12:02:01.763Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/next-js-project-27032 {"projectId":"next-js-project-27032","projectNumber":"363645230761","displayName":"next-js-project","name":"projects/next-js-project-27032","resources":{"hostingSite":"next-js-project-27032"},"state":"ACTIVE","etag":"1_5a89b67e-4b8d-4524-9ae5-bb3cf7f021a5"}
+[debug] [2025-01-25T12:02:04.141Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:04.141Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:04.142Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites pageToken=&pageSize=10
+[debug] [2025-01-25T12:02:05.145Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites 200
+[debug] [2025-01-25T12:02:05.145Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites {"sites":[{"name":"projects/next-js-project-27032/sites/next-js-project-27032","defaultUrl":"https://next-js-project-27032.web.app","appId":"1:363645230761:web:4ee77229f0385f81a213b8","type":"DEFAULT_SITE"}]}
+[debug] [2025-01-25T12:02:05.146Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:05.146Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:05.146Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:363645230761:web:4ee77229f0385f81a213b8/config [none]
+[debug] [2025-01-25T12:02:05.859Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:363645230761:web:4ee77229f0385f81a213b8/config 200
+[debug] [2025-01-25T12:02:05.860Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:363645230761:web:4ee77229f0385f81a213b8/config {"projectId":"next-js-project-27032","appId":"1:363645230761:web:4ee77229f0385f81a213b8","storageBucket":"next-js-project-27032.firebasestorage.app","apiKey":"AIzaSyAXf8xtOCExJjzk3nxZEueNnkfYPnfphO4","authDomain":"next-js-project-27032.firebaseapp.com","messagingSenderId":"363645230761","measurementId":"G-B28BWCNK8V"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-01-25T12:02:12.536Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:12.537Z] Checked if tokens are valid: true, expires at: 1737809769885
+[debug] [2025-01-25T12:02:12.537Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites/next-js-project-27032 [none]
+[debug] [2025-01-25T12:02:13.426Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites/next-js-project-27032 200
+[debug] [2025-01-25T12:02:13.427Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/next-js-project-27032/sites/next-js-project-27032 {"name":"projects/next-js-project-27032/sites/next-js-project-27032","defaultUrl":"https://next-js-project-27032.web.app","appId":"1:363645230761:web:4ee77229f0385f81a213b8","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.1.0
+
+[info]    - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]  ⨯ ESLint: Cannot serialize key "parse" in parser: Function values are not supported.
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/12) ...
+
+[info] AuthProvider null
+AuthProvider null
+AuthProvider null
+AuthProvider null
+
+[info]  ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/user/signin". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at s (C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\server\chunks\482.js:3:213601)
+    at d (C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\server\chunks\482.js:3:230184)
+    at a (C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\server\app\(public)\user\signin\page.js:1:4786)
+    at nO (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:45959)
+    at nI (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:47734)
+    at nL (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:65533)
+    at nN (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:63164)
+    at n$ (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:46311)
+    at nI (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:47780)
+    at nI (C:\Users\mklim\Documents\GitHub\frontend-next-app\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:20:62515)
+Error occurred prerendering page "/user/signin". Read more: https://nextjs.org/docs/messages/prerender-error
+Export encountered an error on /(public)/user/signin/page: /user/signin, exiting the build.
+
+[info]  ⨯ Static worker exited with code: 1 and signal: null
+
+[debug] [2025-01-25T12:02:33.827Z] Error: ENOENT: no such file or directory, open 'C:\Users\mklim\Documents\GitHub\frontend-next-app\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.

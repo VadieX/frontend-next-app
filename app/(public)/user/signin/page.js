@@ -40,6 +40,7 @@ export default function SignInForm() {
 
   return (
     <>
+    <h1 className="text-gray-950 font-bold text-center">Zaloguj się do aplikacji</h1>
       <form onSubmit={onSubmit} className="space-y-4">
         {error && (
           <div role="alert" className="alert alert-error">
